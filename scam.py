@@ -7,7 +7,7 @@ import json
 chars = string.ascii_letters + string.digits + '!@#$%^&*()'
 random.seed(os.urandom(1024))
 
-url = 'http://127.0.0.1:5000/login'
+url = 'http://127.0.0.1:5000/login'         '''pull from developer tools recorded NW statistics'''
 
 # Load names from a JSON file
 with open('names.json', 'r') as file:
@@ -72,7 +72,7 @@ for _ in range(len(single_names)):
     
     # Make a POST request with custom headers
     response = requests.post(url, allow_redirects=False, data={
-        'username': username,
+        'username': username,       '''pull from POST form data'''
         'password': password
     }, headers=headers)
     
